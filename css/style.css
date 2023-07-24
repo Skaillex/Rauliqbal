@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    background-image: url(../images/Background.png);
+    background-repeat: no-repeat;
+    background-position-y:5vw ;
+    background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: inherit;
+    font-weight: 400;
+    margin: 0;
+}
+
+p{
+    font-family: inherit;
+    font-weight: 400;
+    margin: 0;
+}
+
+input, button, textarea{
+    font-family: inherit;
+}
+
+header, footer,nav{
+    display: block;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 134px 0px; 
+}
+
+.open{
+    display: flex!important;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #212121;
+}
+
+header h1{
+    font-size: 25px;
+    letter-spacing: calc(1em / 5); /* letter-spacing: 20% от размера шрифта */
+
+}
+
+header a{
+    font-size: 25px;
+    letter-spacing: calc(1em / 18.18);
+}
+
+header button{
+    font-size: 25px;
+    letter-spacing: calc(1em / 18.18);
+}
+
+.nav-menu__ul li{
+    margin: 0px 2vw;
+}
+
+.nav-menu__ul li:hover a{
+    color: #608AF5;
+}
+
+.poppins_bold{
+    font-weight: 700;
+    color: black;
+}
+
+header h1{
+    color: #14279B;
+}
+
+.nav-menu__ul button{
+    background-color: #608AF5;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 18px;
+}
+
+.nav-menu__ul button:hover{
+    background-color: #5e82de;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 18px;
+}
+
+.burger_menu {
+    width: 40px; 
+    height: 20px; 
+    display: none; 
+    position: relative; 
+    justify-content: flex-end; 
+    align-items: center; 
+    cursor: pointer; 
+}
+
+.burger_menu span { 
+    width: 100%; 
+    height: 3px;
+    transform: scale(1); 
+    background-color: #000000; 
+}
+
+.burger_menu::before, .burger_menu::after {
+    content: '';
+    position: absolute;
+    width: 100%; /* change to a fixed value */
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
+}
+
+.burger_menu::before {
+    top: 0;
+}
+
+.burger_menu::after {
+    bottom: 0;
+}
+
+.burger_menu.active span{
+    transform: scale(0);
+}
+
+.burger_menu.active::before{
+    top:50%;
+    z-index: 100;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.burger_menu.active::after{
+    bottom:50%;
+    z-index: 100;
+    transform: rotate(45deg) translate(0,50%);
+}
+
+@keyframes burger_anim {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.main-content {
+    padding: 0 5vw;
+    margin-top: 66px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.main-content__about {
+    padding-top: 30px;
+    width: 40rem;
+    margin-right: 66px;
+    text-align: start;
+}
+
+.main-content__about span{
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: calc(1em / 200);
+}
+
+.main-content__about h1{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: calc(1em / 200);
+    color: #002265;
+}
+
+.main-content__about p{
+    margin-top: 23px;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: calc(1em / 66.66);
+    color: #082032;
+}
+
+.main-content__image img {
+    width: 100%;
+}
+
+.info-content {
+    margin-top: 114px;
+}
+
+.info-content h1 {
+    font-weight: 400;
+    color: #14279B;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: calc(1em / 18.18);
+}
+
+.info-content span {
+    font-weight: 700;
+    color: #002265;
+}
+
+.info-passions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info-passions__card{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 13px;
+    padding: 20px 24px;
+    margin: 2vw 0px;
+    box-shadow:0px 0px 26px 5px rgba(0, 0, 0, 0.17);
+}
+
+.text-passions{
+    margin-top: 18px;
+}
+
+.text-passions h1{
+    font-size: 25px;
+    letter-spacing: calc(1em / 18.18);
+    color: #000000;
+    text-align: center;
+}
+
+.text-passions span{
+    font-weight: 700;
+}
+
+.text-passions p{
+    text-align: center;
+    margin-top: 13px;
+    font-size: 18px;
+    letter-spacing: calc(1em / 18.18);
+}
+
+.list-card{
+    padding: 0px 134px;
+}
+
+.image-passions{
+    display: flex;
+    justify-content: center;
+}
+
+.info-portfolio {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info-portfolio__card{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 13px;
+    padding: 20px 24px;
+    margin: 2vw 0px;
+    box-shadow:0px 0px 26px 5px rgba(0, 0, 0, 0.17);
+}
+
+.info-portfolio__card img{
+    width: 100%;
+    height: 100%;
+}
+
+.list-networks{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5vw;
+}
+
+.list-networks div{
+    margin: 1vw 4vw;
+}
+
+.list-networks div:hover{
+    filter: contrast(80%);
+}
+
+.list-networks__card img{
+    display: block;
+      margin: 0 auto; 
+}
+
+.list-networks__card h1{
+    text-align: center;
+    color: #000000;
+    font-size: 35px;
+    letter-spacing: calc(1em / 18.18);
+}
+
+footer img{
+    width: 100%;
+}
+
+.fon-footer{
+    width: 100%;
+    position: relative;
+}
+
+.text-footer h2{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    letter-spacing: calc(1em / 18.18);
+}
+
+@media (max-width:1180px) {
+
+
+    .text-footer h2{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        font-size: 35px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        letter-spacing: calc(1em / 18.18);
+    }
+    
+    .img-footer img{
+        height: 300px;
+    }
+
+    header{
+        padding: 4vw;
+    }
+        .burger_menu{
+            display: flex;
+        }
+    
+        .nav-menu__ul{
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            overflow-y: auto;
+            background-color: rgb(165, 220, 234);
+            color: white;
+            animation: burger_anim 0.4s;
+            margin: 0;
+            padding: 10vw 0;
+        }
+    
+        .nav-menu__ul{
+            flex-direction: column!important;
+            row-gap: 30px;
+        } 
+
+        .main-content__about {
+            margin-right: 0px;
+            text-align: center;
+        }
+
+        .list-card{
+            padding: 0px 40px;
+        }
+}
+
+
+
+
