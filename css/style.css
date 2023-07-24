@@ -408,6 +408,12 @@ footer img{
         }
 }
 
+@media (max-width:800px) {
+    .list-networks{
+        flex-direction: column;
+    }
+}
+
 
 
 
